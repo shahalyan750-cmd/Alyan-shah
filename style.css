@@ -1,0 +1,206 @@
+/* Reset & Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #050505; /* Deep dark background */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Hero Section Layout */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Typography & Colors */
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: transparent;
+    -webkit-text-stroke: 2px #00ffcc; /* Neon cyan outline */
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.5); /* Glowing sparkle effect */
+    animation: pulseGlow 2s infinite alternate;
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #050505;
+    background-color: #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 25px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.5);
+    }
+}
+
+/* Canvas Positioning for Future JS */
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Text interactable rahega */
+}/* Projects Section Setup */
+.projects-section {
+    padding: 100px 20px;
+    background-color: #0a0a0a;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Canvas se upar rakhne ke liye */
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.highlight-text {
+    color: #00ffcc;
+}
+
+/* Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Design */
+.project-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ffcc;
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.project-card p {
+    color: #a8a8a8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Tech Tags */
+.tech-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(0, 255, 204, 0.1);
+    color: #00ffcc;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}/* Navigation Bar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #111; /* Dark background */
+            padding: 15px 50px;
+            border-bottom: 2px solid #00ffcc; /* Neon green line */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #00ffcc;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .nav-links li a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+        }
